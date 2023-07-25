@@ -83,10 +83,10 @@ h6 {
 /*------------------------Обнуление----------------------*/
 
 .wrapper {
-    overflow: hidden;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
 }
 
 .container {
@@ -119,6 +119,7 @@ h6 {
 .text p {
     margin-bottom: 14px;
     padding-left: 6px;
+    letter-spacing: 0.1px;
 }
 
 .h4 {
@@ -160,58 +161,50 @@ h6 {
 
 .header__body {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-}
-
-@media (max-width: 850px) {
-    .header__body {
-        flex-direction: column;
-        margin: 5px 0px 10px 0px;
-    }
 }
 
 .header__main {
-    display: flex;
-    align-items: center;
-    padding: 10px 10px;
-    width: 275px;
+    flex: 1 1 33.3333%;
+    padding: 40px 0px 40px 20px;
 }
+
 .header__logo {
-    width: 110px;
+    width: 286px;
 }
+
 .header__title {
     color: #fff;
     font-size: 19px;
     letter-spacing: 1.1px;
-    line-height: 1.2;
+    line-height: 1.4;
     margin-left: 10px;
-}
-.header__main:hover {
-    text-decoration: underline;
+    font-weight: 500;
 }
 
 .header__link {
-    flex: 1 1 auto;
-    padding: 10px 10px;
+    flex: 1 1 33.3333%;
+    letter-spacing: 0.3px;
+    padding: 10px 10px 20px 36px;
 }
 
-.header__button {
-    padding: 10px 35px 10px 10px;
+.header__link__li a {
+    border-bottom: 1px solid #ffffff78;
+}
+
+.header__link__li a:hover {
+    color: #f4c133;
+    border-bottom: 1px solid;
+    transition: 0.3s ease-out;
 }
 
 .header__link__ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.header__link__li:hover {
-    text-decoration: underline;
+    line-height: 30px;
 }
 
 .header__link__li {
-    margin-right: 20px;
-    padding: 0;
     color: #fff;
     font-size: 16px;
 }
@@ -220,27 +213,22 @@ h6 {
     margin-right: 0px;
 }
 
-@media (max-width: 877px) {
-    .header__link__li {
-        font-size: 15px;
-    }
+.header__info {
+    flex: 1 1 19%;
+    padding: 10px;
 }
 
-.header__button {
+.header__info__p {
     color: #f4c133;
     font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
     font-weight: 500;
-}
-
-@media (max-width: 877px) {
-    .header__button {
-        font-size: 15px;
-    }
 }
 
 .header__button::after {
     content: ".pdf";
-    font-size: 0.6em;
+    font-size: 0.7em;
     color: #f4c133;
     position: absolute;
     transform: translate(2px, -3px);
@@ -248,6 +236,26 @@ h6 {
 
 .header__button:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 425px) {
+    .header__main {
+        padding: 40px 0px 10px 20px;
+    }
+}
+@media (max-width: 877px) {
+    .header__info {
+        display: none;
+    }
+}
+
+@media (max-width: 877px) {
+    .header__link__li {
+        font-size: 15px;
+    }
+    .header__info__p {
+        font-size: 15px;
+    }
 }
 
 /*------------------------main----------------------*/
@@ -394,6 +402,7 @@ h6 {
     color: #1f1f1f;
     font-weight: 600;
     text-shadow: 2px 2px #c69c28;
+    font-size: 16px;
 }
 
 .button-black:hover {
@@ -455,6 +464,11 @@ h6 {
     height: 100%;
     border-radius: 2px;
 }
+
+.informer {
+    margin: 10px 0px 0px 0px;
+}
+
 /*------------------------green-block----------------------*/
 
 .green-block {
@@ -462,16 +476,15 @@ h6 {
 }
 
 .green-block__row {
-    padding: 60px 20px 30px 20px;
+    padding: 60px 20px 10px 20px;
 }
+
 @media (max-width: 425px) {
     .green-block__row {
-        padding: 40px 20px 40px 20px;
+        padding: 40px 20px 10px 20px;
     }
 }
 
-.green-block__body {
-}
 .green-block__map {
     padding: 0px 5px 0px 5px;
 }
@@ -483,38 +496,37 @@ h6 {
 }
 
 .green-block__a {
+    border-bottom: 1px solid #ffffff78;
     color: #fff;
 }
 
 .green-block__a:hover {
-    text-decoration: underline;
+    color: #f4c133;
+    border-bottom: 1px solid;
+    transition: 0.3s ease-out;
 }
 
 /*------------------------footer----------------------*/
 
 .footer {
     background-color: #29a04d;
+    font-size: 16px;
 }
+
+@media (max-width: 425px) {
+    .footer {
+        font-size: 15px;
+    }
+}
+
 .footer__row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0px 20px 20px 20px;
-}
-
-.footer__text {
+    text-align: end;
     letter-spacing: 1px;
-    margin-bottom: 14px;
+    padding: 10px 25px 25px 25px;
 }
 
-.footer__a {
-    color: #fff;
-    margin-right: 15px;
-}
-.footer__a:last-child {
-    margin-right: 0px;
-}
-
-.footer__a:hover {
-    text-decoration: underline;
+@media (max-width: 900px) {
+    .footer__row {
+        text-align: start;
+    }
 }
